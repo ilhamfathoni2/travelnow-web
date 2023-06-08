@@ -5,7 +5,7 @@ import {
   homeLake,
   homeMountain,
   homeBeach,
-} from "../../../public/assets/img";
+} from "../../public/assets/img";
 import Image from "next/image";
 
 export default function HomeSection() {
@@ -45,13 +45,10 @@ export default function HomeSection() {
             <Image
               src={homeTrees}
               alt="home img"
-              width={100}
               quality={100}
               className="home__card-img w-full object-cover"
             />
-            <h3 className="absolute left-[1rem] bottom-[1rem] z-[1]">
-              Croatia
-            </h3>
+            <h3 className="absolute left-[1rem] bottom-[1rem] z-10">Croatia</h3>
             <div className="home__card-shadow"></div>
           </article>
 
@@ -59,13 +56,10 @@ export default function HomeSection() {
             <Image
               src={homeLake}
               alt="home img"
-              width={100}
               quality={100}
               className="home__card-img w-full object-cover"
             />
-            <h3 className="absolute left-[1rem] bottom-[1rem] z-[1]">
-              Iceland
-            </h3>
+            <h3 className="absolute left-[1rem] bottom-[1rem] z-10">Iceland</h3>
             <div className="home__card-shadow"></div>
           </article>
 
@@ -76,7 +70,7 @@ export default function HomeSection() {
               quality={100}
               className="home__card-img w-full object-cover"
             />
-            <h3 className="absolute left-[1rem] bottom-[1rem] z-[1]">Italy</h3>
+            <h3 className="absolute left-[1rem] bottom-[1rem] z-10">Italy</h3>
             <div className="home__card-shadow"></div>
           </article>
 
@@ -87,7 +81,7 @@ export default function HomeSection() {
               quality={100}
               className="home__card-img w-full object-cover"
             />
-            <h3 className="home__card-title absolute left-[1rem] bottom-[1rem] z-[1]">
+            <h3 className="home__card-title absolute left-[1rem] bottom-[1rem] z-10">
               Spain
             </h3>
             <div className="home__card-shadow"></div>

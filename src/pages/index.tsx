@@ -1,9 +1,19 @@
 import Image from "next/image";
 import Head from "next/head";
-import { ArrowRightIcon } from "@heroicons/react/24/outline";
-import { homeBg, homeTrees, homeLake, homeMountain, homeBeach } from "../../public/assets/img";
+import { ArrowRightIcon, MapPinIcon } from "@heroicons/react/24/outline";
+import {
+  aboutBeach,
+  // homeBg,
+  // homeTrees,
+  // homeLake,
+  // homeMountain,
+  // homeBeach,
+  popularMountain,
+  popularForest,
+  popularLake
+} from "../../public/assets/img";
 import Navbar from "@/component/navbar/nav";
-import HomeSection from "@/component/home/home";
+import HomeSection from "@/component/home";
 
 export default function Home() {
   return (
@@ -17,118 +27,117 @@ export default function Home() {
 
       {/* ----- MAIN CONTENT ----- */}
       <main className="main">
-        <HomeSection />
-        {/* ---- MAIN Home ---- */}
-        {/* <section className="home section" id="home">
-          <Image src={homeBg} alt="background image" quality={100} className="home__bg" />
-          <div className="home__shadow"></div>
+        {/* ---- HOME ---- */}
+        <HomeSection/>
 
-          <div className="home__container container grid">
+        {/* ---- ABOUT ---- */}
+        <section className="about section" id="about">
+          <div className="about__container container grid">
             <div className="text-center">
-              <h3 className="text-[16px] mb-[1rem] font-montserrat">Welcome To Travelnow</h3>
-
-              <h1 className="text-[40px] mb-[1rem] font-popins">
-                Explore <br /> The World
-              </h1>
+              <h2 className="section__title">
+                Learn More <br /> About Travel
+              </h2>
 
               <p className="mb-[2rem] text-gray-300 font-normal font-montserrat">
-                Live the trips exploring the world. Discover paradises, islands,
-                mountains, much more, get your trip now
+                All the trips around the world are great pleasure and happiness
+                for anyone, enjoy the sights when your travel the world. Travel
+                safely and without worries, get your trip and explore the
+                paradises of the world.
               </p>
 
               <a href="#" className="button">
-                <p>Start Your Journey </p> <ArrowRightIcon width={16} className="arrow-right-icon" />
+                <p>Explore Travel</p>
+                <ArrowRightIcon width={16} className="arrow-right-icon" />
               </a>
             </div>
 
-            <div className="home__cards grid">
-              <article className="home__card">
-                <Image
-                  src={homeTrees}
-                  alt="home img"
-                  width={100}
-                  quality={100}
-                  className="home__card-img w-full object-cover"
-                />
-                <h3 className="absolute left-[1rem] bottom-[1rem] z-[1]">Croatia</h3>
-                <div className="home__card-shadow"></div>
-              </article>
-
-              <article className="home__card">
-                <Image
-                  src={homeLake}
-                  alt="home img"
-                  width={100}
-                  quality={100}
-                  className="home__card-img w-full object-cover"
-                />
-                <h3 className="absolute left-[1rem] bottom-[1rem] z-[1]">Iceland</h3>
-                <div className="home__card-shadow"></div>
-              </article>
-
-              <article className="home__card">
-                <Image
-                  src={homeMountain}
-                  alt="home img"
-                  quality={100}
-                  className="home__card-img w-full object-cover"
-                />
-                <h3 className="absolute left-[1rem] bottom-[1rem] z-[1]">Italy</h3>
-                <div className="home__card-shadow"></div>
-              </article>
-
-              <article className="home__card">
-                <Image
-                  src={homeBeach}
-                  alt="home img"
-                  quality={100}
-                  className="home__card-img w-full object-cover"
-                />
-                <h3 className="home__card-title absolute left-[1rem] bottom-[1rem] z-[1]">Spain</h3>
-                <div className="home__card-shadow"></div>
-              </article>
+            <div className="about__image">
+              <Image
+                src={aboutBeach}
+                alt="about image"
+                quality={100}
+                className="about__img"
+              />
+              <div className="about__shadow"></div>
             </div>
           </div>
-        </section> */}
-
-        {/* ---- ABOUT ---- */}
-        <section className="about section" id="about"></section>
+        </section>
 
         {/* ---- POPULAR ---- */}
-        <section className="popular section" id="popular"></section>
+        <section className="popular section" id="popular">
+          <h2 className="section__title">
+            Enjoy The Beauty <br /> Of The World
+          </h2>
+
+          <div className="popular__container container grid">
+            <article className="popular__card">
+              <div className="popular__image">
+                <Image
+                  src={popularMountain}
+                  alt="popular image"
+                  quality={100}
+                  className="popular__img"
+                />
+                <div className="popular__shadow"></div>
+              </div>
+
+              <h2 className="popular__title">
+                Logan Mountain
+              </h2>
+
+              <div className="popular__location">
+                <MapPinIcon width={16} />
+                <span>Canada</span>
+              </div>
+            </article>
+
+            <article className="popular__card">
+              <div className="popular__image">
+                <Image
+                  src={popularForest}
+                  alt="popular image"
+                  quality={100}
+                  className="popular__img"
+                />
+                <div className="popular__shadow"></div>
+              </div>
+
+              <h2 className="popular__title">
+                Spike Forest
+              </h2>
+
+              <div className="popular__location">
+                <MapPinIcon width={16} />
+                <span>Irland</span>
+              </div>
+            </article>
+
+            <article className="popular__card">
+              <div className="popular__image">
+                <Image
+                  src={popularLake}
+                  alt="popular image"
+                  quality={100}
+                  className="popular__img"
+                />
+                <div className="popular__shadow"></div>
+              </div>
+
+              <h2 className="popular__title">
+                Garda Lake
+              </h2>
+
+              <div className="popular__location">
+                <MapPinIcon width={16} />
+                <span>Italy</span>
+              </div>
+            </article>
+          </div>
+        </section>
 
         {/* ---- EXPLORE ---- */}
         <section className="explore section" id="explore"></section>
       </main>
-
-      {/* <div className="relative h-screen">
-        <div className="absolute inset-0">
-          <Image src={homeBg} alt="background image" fill />
-        </div>
-
-        <div className="relative z-10 flex flex-col justify-center h-full">
-          <div className="px-[150px]">
-            <h4 className="lg:text-[25px] mt-10 font-medium text-gray-200">
-              Welcome To Travelnow
-            </h4>
-
-            <h1 className="mt-3 lg:text-[85px] font-semibold text-white leading-[100px]">
-              Explore <br /> The World
-            </h1>
-
-            <p className="mt-3 text-white lg:w-[460px]">
-              Live the trips exploring the world. Discover paradises, islands,
-              mountains, much more, get your trip now
-            </p>
-
-            <button className="mt-5 glass-effect  rounded-[3px] py-3 px-5 w-fit text-white">
-              <div className="flex justify-between gap-3">
-                <p>Start Your Journey</p> <ArrowRightIcon className="w-4" />{" "}
-              </div>
-            </button>
-          </div>
-        </div>
-      </div> */}
     </>
   );
 }
