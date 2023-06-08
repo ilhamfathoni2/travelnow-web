@@ -3,6 +3,7 @@ import logoTravelnowBlack from "./logo-travelnow-black.png";
 import logoTravelnowWhite from "./logo-travelnow-white.png";
 import aboutBeach from "./about-beach.jpg";
 import exploreBeach from "./explore-beach.jpg";
+import explorePerfil from "./explore-perfil.png";
 import homeBeach from "./home-beach.jpg";
 import homeBg from "./home-bg.jpg";
 import homeLake from "./home-lake.jpg";
@@ -19,6 +20,7 @@ export {
   logoTravelnowWhite,
   aboutBeach,
   exploreBeach,
+  explorePerfil,
   homeBeach,
   homeBg,
   homeLake,
