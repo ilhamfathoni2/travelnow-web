@@ -7,6 +7,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        popins: ['Poppins', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
+      },
+      colors: {
+        transparant: 'transparant',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
