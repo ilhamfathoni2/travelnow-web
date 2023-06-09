@@ -1,7 +1,12 @@
 import { XMarkIcon, Bars3Icon } from "@heroicons/react/24/outline";
 import { logoTravelnowWhite } from "../../../public/assets/img";
 import Image from "next/image";
+import { Montserrat} from "next/font/google";
 
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+});
 export default function Navbar() {
   if (typeof window !== "undefined") {
     // Show Menu
@@ -59,22 +64,22 @@ export default function Navbar() {
         <div className="nav__menu" id="nav-menu">
           <ul className="nav__list">
             <li className="nav__item">
-              <a href="#home" className="nav__link">
+              <a href="#home" className={`nav__link ${montserrat.className}`}>
                 Home
               </a>
             </li>
             <li className="nav__item">
-              <a href="#about" className="nav__link">
+              <a href="#about" className={`nav__link ${montserrat.className}`}>
                 About
               </a>
             </li>
             <li className="nav__item">
-              <a href="#popular" className="nav__link">
+              <a href="#popular" className={`nav__link ${montserrat.className}`}>
                 Popular
               </a>
             </li>
             <li className="nav__item">
-              <a href="#explore" className="nav__link">
+              <a href="#explore" className={`nav__link ${montserrat.className}`}>
                 Explore
               </a>
             </li>

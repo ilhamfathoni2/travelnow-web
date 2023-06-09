@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Head from "next/head";
-import { ArrowRightIcon, MapPinIcon } from "@heroicons/react/24/outline";
+import { MapPinIcon } from "@heroicons/react/24/outline";
+import { FaArrowRight, FaArrowUp } from "react-icons/fa";
 import {
   logoTravelnowWhite,
   aboutBeach,
@@ -31,6 +32,15 @@ const montserrat = Montserrat({
 });
 
 export default function Home() {
+  if (typeof window !== "undefined") {
+    const scrollUp = () => {
+      const scrollup = window.document.getElementById("scroll-up");
+      window.scrollY >= 350
+        ? scrollup?.classList.add("show-scroll")
+        : scrollup?.classList.remove("show-scroll");
+    };
+    window.addEventListener("scroll", scrollUp);
+  }
   return (
     <>
       <Head>
@@ -55,7 +65,7 @@ export default function Home() {
           <div className="home__container container grid">
             <div className="text-center">
               <h3 className={`text-[16px] mb-[1rem] ${montserrat.className}`}>
-                Welcome To Travelnow
+                Welcome To Gotravelnow
               </h3>
 
               <h1 className={`text-[40px] mb-[1rem] ${popins.className}`}>
@@ -71,7 +81,7 @@ export default function Home() {
 
               <a href="#" className="button">
                 <p className={montserrat.className}>Start Your Journey </p>
-                <ArrowRightIcon width={16} className="arrow-right-icon" />
+                <FaArrowRight className="arrow-right-icon" />
               </a>
             </div>
 
@@ -145,7 +155,7 @@ export default function Home() {
           <div className="about__container container grid">
             <div className="text-center">
               <h2 className={`section__title ${popins.className}`}>
-                Learn More <br /> About Travel
+                Learn More <br /> About Gotravelnow
               </h2>
 
               <p
@@ -159,7 +169,7 @@ export default function Home() {
 
               <a href="#" className="button">
                 <p className={montserrat.className}>Explore Travel</p>
-                <ArrowRightIcon width={16} className="arrow-right-icon" />
+                <FaArrowRight className="arrow-right-icon" />
               </a>
             </div>
 
@@ -312,7 +322,7 @@ export default function Home() {
                   <p className={montserrat.className}>
                     Subscribe Our Newsletter
                   </p>
-                  <ArrowRightIcon width={16} />
+                  <FaArrowRight className="arrow-right-icon" />
                 </button>
               </form>
             </div>
@@ -528,6 +538,9 @@ export default function Home() {
       </footer>
 
       {/* ---- SCROLL UP ---- */}
+      <a href="#" className="scrollup" id="scroll-up">
+        <FaArrowUp />
+      </a>
     </>
   );
 }
