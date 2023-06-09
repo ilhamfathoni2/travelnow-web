@@ -51,7 +51,7 @@ export default function Navbar() {
           <Image
             src={logoTravelnowWhite}
             alt="logo-travelnow"
-            width={100}
+            width={130}
             quality={100}
           />
         </a>
